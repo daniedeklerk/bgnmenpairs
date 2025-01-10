@@ -7,93 +7,102 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f2f5;
+            margin: 20px;
+            background-color: #f5f5f5;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            padding: 0 15px;
         }
 
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 2px solid #e1e4e8;
-            padding-bottom: 20px;
         }
 
         .header h1 {
-            color: #24292e;
+            color: #333;
             margin-bottom: 10px;
             font-size: 24px;
         }
 
         .header h2 {
-            color: #586069;
+            color: #666;
             margin-bottom: 5px;
             font-size: 20px;
         }
 
-        .section {
-            margin-bottom: 30px;
+        .team-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
         }
 
-        .section-title {
-            background-color: #0366d6;
-            color: white;
-            padding: 12px 15px;
+        .team-header {
+            background-color: #f0f7ff;
+            padding: 15px;
             border-radius: 6px;
             margin-bottom: 15px;
-            font-weight: 600;
+        }
+
+        .team-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
+            margin-top: 10px;
         }
 
         th, td {
-            padding: 12px 15px;
+            padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #e1e4e8;
+            border-bottom: 1px solid #ddd;
         }
 
         th {
-            background-color: #f6f8fa;
-            font-weight: 600;
-            color: #24292e;
-            border-top: 1px solid #e1e4e8;
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
         }
 
-        tr:nth-child(even) {
+        tr:hover {
             background-color: #f8f9fa;
         }
 
-        td {
-            color: #24292e;
-        }
-
         .club {
-            color: #586069;
+            color: #666;
             font-size: 0.9em;
+            display: block;
+            margin-top: 3px;
         }
 
         @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+
             .container {
+                padding: 0 10px;
+            }
+
+            .team-card {
                 padding: 15px;
             }
 
+            .team-header {
+                padding: 12px;
+            }
+
             th, td {
-                padding: 10px;
+                padding: 8px;
                 font-size: 14px;
             }
 
@@ -103,6 +112,17 @@
 
             .header h2 {
                 font-size: 16px;
+            }
+
+            /* Make table scrollable on mobile */
+            .table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            /* Stack club info under opponent name on mobile */
+            td .club {
+                margin-top: 4px;
             }
         }
     </style>
@@ -114,98 +134,102 @@
             <h2>All Area Pest Control Mens Pairs</h2>
         </div>
 
-        <div class="section">
-            <div class="section-title">
-                Section 2 - Le Roux, Johan / Swart, Johan (Bronkhorstspruit)
+        <div class="team-card">
+            <div class="team-header">
+                <div class="team-name">Section 2 - Le Roux, Johan / Swart, Johan (Bronkhorstspruit)</div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Round</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Venue</th>
-                        <th>Opponent</th>
-                        <th>Rink</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>26/01/2025</td>
-                        <td>08:30</td>
-                        <td>Brits</td>
-                        <td>v Breda, Johann / Dickinson, Charles<br>
-                            <span class="club">PHSOB, BGN</span></td>
-                        <td>A6</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>26/01/2025</td>
-                        <td>11:30</td>
-                        <td>Brits</td>
-                        <td>Perry, W / Herbert, MD<br>
-                            <span class="club">Wingate Park, BGN</span></td>
-                        <td>A2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>26/01/2025</td>
-                        <td>14:00</td>
-                        <td>Brits</td>
-                        <td>Ras, M / Swart, Jos<br>
-                            <span class="club">Harlequins, BGN</span></td>
-                        <td>A3</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Opponent</th>
+                            <th>Rink</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>26/01/2025</td>
+                            <td>08:30</td>
+                            <td>Brits</td>
+                            <td>v Breda, Johann / Dickinson, Charles<br>
+                                <span class="club">PHSOB, BGN</span></td>
+                            <td>A6</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>26/01/2025</td>
+                            <td>11:30</td>
+                            <td>Brits</td>
+                            <td>Perry, W / Herbert, MD<br>
+                                <span class="club">Wingate Park, BGN</span></td>
+                            <td>A2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>26/01/2025</td>
+                            <td>14:00</td>
+                            <td>Brits</td>
+                            <td>Ras, M / Swart, Jos<br>
+                                <span class="club">Harlequins, BGN</span></td>
+                            <td>A3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div class="section">
-            <div class="section-title">
-                Section 8 - Fourie, Johan / Gouws, R (Bronkhorstspruit)
+        <div class="team-card">
+            <div class="team-header">
+                <div class="team-name">Section 8 - Fourie, Johan / Gouws, R (Bronkhorstspruit)</div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Round</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Venue</th>
-                        <th>Opponent</th>
-                        <th>Rink</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>26/01/2025</td>
-                        <td>08:30</td>
-                        <td>Wonderboom</td>
-                        <td>Myburg, Hennie / Myburg, B<br>
-                            <span class="club">Pretoria North, BGN</span></td>
-                        <td>A2</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>26/01/2025</td>
-                        <td>11:30</td>
-                        <td>Wonderboom</td>
-                        <td>Wilson, KJ / Mostert, Charles Alfred<br>
-                            <span class="club">Villieria, BGN</span></td>
-                        <td>A6</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>26/01/2025</td>
-                        <td>14:00</td>
-                        <td>Wonderboom</td>
-                        <td>Phillips, William / Muller, Wimpie<br>
-                            <span class="club">Brits, BGN</span></td>
-                        <td>A3</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Opponent</th>
+                            <th>Rink</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>26/01/2025</td>
+                            <td>08:30</td>
+                            <td>Wonderboom</td>
+                            <td>Myburg, Hennie / Myburg, B<br>
+                                <span class="club">Pretoria North, BGN</span></td>
+                            <td>A2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>26/01/2025</td>
+                            <td>11:30</td>
+                            <td>Wonderboom</td>
+                            <td>Wilson, KJ / Mostert, Charles Alfred<br>
+                                <span class="club">Villieria, BGN</span></td>
+                            <td>A6</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>26/01/2025</td>
+                            <td>14:00</td>
+                            <td>Wonderboom</td>
+                            <td>Phillips, William / Muller, Wimpie<br>
+                                <span class="club">Brits, BGN</span></td>
+                            <td>A3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
